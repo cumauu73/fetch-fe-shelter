@@ -19,6 +19,7 @@ header {
     padding: 15px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     width: 100%;
 }
@@ -123,7 +124,7 @@ button {
     right: 20px;
     width: 5rem;
     padding: 3px;
-    background-color:#5f0c61;
+    background-color: #5f0c61;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -135,25 +136,41 @@ button {
 footer {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     align-items: center;
     background-image: linear-gradient(to right, #7d0064cc, #ff9100d0);
     width: 100%;
     padding: 18px;
 }
-.second, .third {
+
+footer a {
+    color: black;
+}
+
+.second,
+.third {
     display: flex;
     flex-direction: column;
 }
-.second a, .third a {
+
+.second a,
+.third a {
     margin-top: 20px;
 }
+
 .social {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
 }
+
 .self-center {
     display: flex;
     align-items: center;
     color: black;
+}
+
+.meimeg {
+    display: flex;
+    flex-direction: column;
 }
