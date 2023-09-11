@@ -1,0 +1,94 @@
+:root {
+    --yellow: #feca19;
+    --pruplelogo: #5f0c61;
+    --purple2: #7d0065;
+    --orange: #ff9200;
+    --pink: #fd683f;
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header {
+    background-color: #5f0c61d0;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #ff91003a;
+    background-image: url(../images/me.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+form {
+    height: 520px;
+    width: 400px;
+    background-color: #7d006465;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    padding: 50px 35px;
+}
+
+form * {
+    color: white;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+
+form h3 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+input {
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #ff9200;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+::placeholder {
+    color: #5f0c61;
+}
+
+button {
+    margin-top: 50px;
+    width: 100%;
+    background-color: #ff9200;
+    color: #5f0c61;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
