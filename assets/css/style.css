@@ -15,7 +15,7 @@
 
 header {
     background-image: linear-gradient(to right, #ff9100d0, #7d0064cc);
-    color: white;
+    color:#feca19;
     padding: 15px;
     display: flex;
     justify-content: space-between;
@@ -23,6 +23,7 @@ header {
     align-items: center;
     width: 100%;
 }
+
 
 .logo {
     margin-left: 10px;
@@ -116,6 +117,15 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+#logout {
+    background-color: #feca19;
+    width: 80px;
+    padding:5px ;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
 
 .fixedbutton {
     color: #feca19;
