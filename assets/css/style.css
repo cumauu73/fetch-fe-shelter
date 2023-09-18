@@ -47,14 +47,16 @@ a:visited {
 }
 
 body {
+    background-position: center;
     color: #feca19;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     background-image: url(../images/pets.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left top;
+    
+   
 }
 
 form {
@@ -126,6 +128,14 @@ button {
     bottom: 20px;
     right: 20px;
 }
+.alpha {
+    background-color: #feca19;
+    width: 200px;
+    padding: 3px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: #5f0c61 solid 2px;
+}
 
 
 .fixedbutton {
@@ -152,6 +162,7 @@ footer {
     background-image: linear-gradient(to right, #7d0064cc, #ff9100d0);
     width: 100%;
     padding: 18px;
+    
 }
 
 footer a {
@@ -192,18 +203,24 @@ footer a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 60rem;
+    width: 72rem;
     height: 20rem;
     background-color: #5f0c6196;
     border: 2px solid black;
-    padding: 10px;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    border-radius: 20px;
+    padding: 20px;
 }
 #dog-fact {
     width: 100px;
     padding: 8px;
-    position: relative;
-    bottom: 20px;
-    
+    position: absolute;
+  bottom: 20px;  
+}
+
+iframe {
+margin-left: 10px;
+margin-right: 10px;
 }
