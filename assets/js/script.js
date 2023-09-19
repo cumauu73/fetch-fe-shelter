@@ -34,6 +34,29 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+fetch("http://frontend-take-home-service.fetch.com/dogs/search" , {
+    method : 'GET',
+    headers: {
+        "Content-Type": "application/json"
+    },
+    
+})
+.then(response => {
+    if (response.ok) {
+        // Authentication successful, store a flag in localStorage
+        console.log(response);
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "search.html";
+    } else {
+        // Handle authentication error
+        console.error("Please check your email or name");
+    }
+})
+.catch(error => {
+    console.error("Error:", error);
+});
+
+
 
 
 //dog fact fetch button
