@@ -70,6 +70,37 @@ form {
     margin-top: 130px;
     margin-bottom: 130px;
 }
+#breedform {
+    height: 80px;
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    margin-bottom: 40px;
+}
+#breedform button {
+    margin: 0 0 0 10px;
+    width: 200px;
+}
+#breedform input {
+    margin: 0 10px 0 0;
+}
+#breedform label {
+    margin: 0 0 0 0;
+}
+.result {
+    width: 72rem;
+    justify-content: space-around;
+    margin: 30px 0 40px 0;
+}
+.hhh {
+    margin: 0 0 10px 0;
+}
+.uli li {
+    margin: 10px 0 10px 0;
+    font-size: 25px;
+}
 
 form * {
     color: white;
@@ -119,6 +150,7 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
 #logout {
     background-color: #feca19;
     width: 80px;

@@ -20,31 +20,31 @@ document.addEventListener("DOMContentLoaded", function () {
             withCredentials: true,
             body: JSON.stringify(userData)
         })
-        .then(response => {
-            if (response.ok) {
-                // Authentication successful, store a flag in localStorage
-                console.log("Logged in successfully");
-                localStorage.setItem("isLoggedIn", "true");
-                window.location.href = "search.html";
-            } else {
-                // Handle authentication error
-                console.error("Please check your email or name");
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-        });
+            .then(response => {
+                if (response.ok) {
+                    // Authentication successful, store a flag in localStorage
+                    console.log("Logged in successfully");
+                    localStorage.setItem("isLoggedIn", "true");
+                    window.location.href = "search.html";
+                } else {
+                    // Handle authentication error
+                    console.error("Please check your email or name");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
     });
 });
 
 //loguot
 const logoutButton = document.getElementById("logout");
-    logoutButton.addEventListener("click", function () {
-        fetch("https://frontend-take-home-service.fetch.com/auth/logout", {
-            method: "POST",
-            credentials: "include",
-            withCredentials: true
-        })
+logoutButton.addEventListener("click", function () {
+    fetch("https://frontend-take-home-service.fetch.com/auth/logout", {
+        method: "POST",
+        credentials: "include",
+        withCredentials: true
+    })
         .then(response => {
             if (response.ok) {
                 // Logout successful, update localStorage and redirect to index.html
@@ -59,42 +59,42 @@ const logoutButton = document.getElementById("logout");
         .catch(error => {
             console.error("Error:", error);
         });
-    });
+});
 
 
 //dog fact fetch button
 const dogFactbtn = document.getElementById('dog-fact')
-dogFactbtn.addEventListener('click', function() {
-    
+dogFactbtn.addEventListener('click', function () {
+
     fetch('https://dogapi.dog/api/v2/facts')
-    .then (function(response) {
-        return response.json()
-    })
-    .then (function (data) {
-        var heroText = document.getElementById('hero-text')
-        var dogFact = data.data[0].attributes.body
-        heroText.innerText = dogFact
-        heroText.classList.add('is-size-3')
-    })
+        .then(function (response) {
+            return response.json()
+        })
+        .then(function (data) {
+            var heroText = document.getElementById('hero-text')
+            var dogFact = data.data[0].attributes.body
+            heroText.innerText = dogFact
+            heroText.classList.add('is-size-3')
+        })
 });
 
 //search-breed- doesnt work
-// fetch("http://frontend-take-home-service.fetch.com/dogs/search?breeds" , {
+// fetch("http://frontend-take-home-service.fetch.com/dogs/search?breeds=golden" , {
 //     method : 'GET',
 //     headers: {
 //         "Content-Type": "application/json"
 //     },
 //     credentials: "include",
 //     withCredentials: true
-    
+
 // })
 // .then(response => {
 //     if (response.ok) {
 //         console.log("this is response");
 //         console.log(response);
-        
+
 //     } else {
-        
+
 //         console.error("Please check your email or name");
 //     }
 // })
@@ -107,6 +107,7 @@ var breedForm = document.querySelector("#breedform");
 var breedNameElement = document.querySelector(".breedname");
 var breedImageElement = document.querySelector("#breedimage");
 var breedSpecificationsList = document.querySelector(".result ul");
+var resultElement = document.querySelector(".result");
 
 // Function to get information from API on dog breed input
 function getInfoByDogBreed(breedName) {
@@ -115,10 +116,10 @@ function getInfoByDogBreed(breedName) {
         headers: { 'X-Api-Key': 'CaQ8v45mFAOJHJN4gYje4g==wxE7PtrOIoDNbi4t' },
         contentType: 'application/json',
     })
-        .then(function(response) {
+        .then(function (response) {
             return response.json();
         })
-        .then(function(breedData) {
+        .then(function (breedData) {
             console.log(breedData[0]);
 
             // Display breed name and image
@@ -147,7 +148,7 @@ function getInfoByDogBreed(breedName) {
             breedSpecificationsList.appendChild(createSpecificationItem("Shedding", breedData[0].shedding));
 
         })
-        .catch(function(error) {
+        .catch(function (error) {
             console.log(error);
             showModal();
         })
@@ -159,6 +160,7 @@ function getBreedInput(event) {
     var searchTerm = breedInputEl.value.trim(); // Trim to remove leading/trailing whitespace
     if (searchTerm.length > 0) {
         getInfoByDogBreed(searchTerm);
+        resultElement.style.display = "flex";
     }
 }
 
